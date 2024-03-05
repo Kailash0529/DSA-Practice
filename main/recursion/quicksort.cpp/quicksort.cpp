@@ -16,6 +16,7 @@ if(arr[i]<=pivotele)count++;
      while(i<pivot&&j>pivot)
      {
         while(arr[i]<=pivotele)i++;
+        cout<<pivotele<<"that";
         while(arr[j]>pivotele)j--;
         if(i<pivot&&j>pivot)swap(arr[i],arr[j]);
 
@@ -33,8 +34,8 @@ if(arr[i]<=pivotele)count++;
 }
 int main()
 {
-    int arr[]={3,3,4,9,9,7,7,6,2,5,5,5,5,8,8,8,3,3,7,7,63};
-    int n=21;
+    int arr[]={3,5,9,7,6,4};
+    int n=6;
     int s=0,e=n-1;
     qs(arr,s,e);
     for(int i=0;i<n;i++)
