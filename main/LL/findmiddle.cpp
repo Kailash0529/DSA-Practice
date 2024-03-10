@@ -17,7 +17,7 @@ void print(node* &head)
         {
             cout<<temp->data<<" ";
             temp=temp->next;
-        }
+        } 
     }
     node* findmiddle(node* &head)
     {
