@@ -192,21 +192,21 @@ void print(node* &head)
     }
 int main()
 {
-    node* head=new node(50);
-    node* second=new node(40);
-    node* third=new node(30);
-    node* fourth=new node(50);
-    node* fifth=new node(50);
-    node* sixth=new node(50);
-    node* seventh=new node(50);
-
+    node* head=new node(62);
+    node* second=new node(20);
+    node* third=new node(37);
+    node* fourth=new node(80);
+    node* fifth=new node(14);
+    node* sixth=new node(14);
+    node* seventh=new node(69);
+//62 20 37 80 14 14 69 71 56 47
     head->next=second;
     second->next=third;
     third->next=fourth;
     fourth->next=fifth;
     fifth->next=sixth;
     sixth->next=seventh;
-    seventh->next=third;
+    seventh->next=head;
 
     // head=reverseknodes(head,4);
     // print(head);
@@ -214,6 +214,6 @@ int main()
     cout<<"starting of loop is:"<<findstartingofloop(head)->data;
     removeloop(head);
     cout<<islooppresent(head);
-
+//
     // cout<<findmiddle(head)->data;
 }
