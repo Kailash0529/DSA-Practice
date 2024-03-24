@@ -8,6 +8,7 @@ class node{
     {
         this->data=data;
         this->next=NULL;
+        
     }
 };
 void print(node* &head)
