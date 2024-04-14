@@ -38,15 +38,30 @@ next[n-1]=-1;
         next[index]=-1;
         rear[q]=index;
         arr[index]=x;
-        cout<<arr[2]<<endl;
+        // cout<<arr[2]<<endl;
         return true;
+    }
+    bool pop(int q)
+    {
+        if(front[q]==-1)return false;
+        int index=front[q];
+        arr[index]=-1;
+        front[q]=next[index];
+        next[index]=freespot;
+        freespot=index;
+        cout<<arr[front[q]]<<endl;
+        return true;
+
+
     }
 };
 int main()
 {
 queue q(10,2);
 q.push(10,1);
-q.push(10,1);
+q.push(11,1);
 q.push(101,1);
+q.pop(1);
+q.pop(1);
     return 0;
 }
