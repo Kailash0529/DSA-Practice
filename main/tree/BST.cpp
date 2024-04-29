@@ -181,20 +181,38 @@ tree* deletes(tree* root,int key)
   }
   return root;
 }
+tree* BSTusinginorder(int inorder[],int s,int e)
+{
+    if(s>e)
+    {
+        return NULL;
+    }
+    int m=(s+e)/2;
+    int ele=inorder[m];
+    tree* root=new tree(ele);
+    root->left=BSTusinginorder(inorder,s,m-1);
+    root->right=BSTusinginorder(inorder,m+1,e);
+    return root;
+}
 int main()
 {
     tree* root=nullptr;
-    takeinput(root);
+    int inorder[]={10,20,80,85,91,93,99,100};
+    int s=0;
+    int e=7;
+    root=BSTusinginorder(inorder,s,e);
+
+    // takeinput(root);/
     
     
 //   cout<<"inordertraversal"<<endl;
-//     inordertraversal(root);
+    inordertraversal(root);
 //   cout<<"preordertraversal"<<endl;
 //     preordertraversal(root);
 //   cout<<"postordertraversal"<<endl;
 //     postordertraversal(root);
 //     cout<<search(root,15); 
 //     cout<<"minvalue is"<<minval(root);
-root=deletes(root,3);
-levelordertraversal(root);
+// root=deletes(root,3);
+// levelordertraversal(root);
 }
