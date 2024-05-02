@@ -16,6 +16,30 @@ class node{
     }
 
 };
+class NodeData{
+    public:
+int size;
+int max;
+int min;
+bool isBST;
+NodeData()
+{
+    size=0;
+    max=0;
+    min=0;
+    isBST=true;
+}
+NodeData(int s,int maxi,int mini,bool isv)
+{
+    size=s;
+    max=maxi;
+    min=mini;
+    isBST=isv;
+}
+
+
+
+};
 node* build(node* root)
 {
     int data;
@@ -125,6 +149,31 @@ void implementfromlevelorder(node* &root)
             q.push(temp->right);
         }
     }
+}
+NodeData findLargestBST(node* root,int ans)
+{
+    if(root==NULL)
+    {
+NodeData temp(0,INT_MIN,INT_MAX,true);
+    }
+    NodeData leftkaAns=findLargestBST(root->left,ans);
+    NodeData rightkaAns=findLargestBST(root->right,ans);
+    NodeData currkaAns;
+    currkaAns.size=leftkaAns.size+rightkaAns.size;
+    currkaAns.max=leftkaAns.max+rightkaAns.max;
+    currkaAns.min=leftkaAns.min+rightkaAns.min;
+    if((leftkaAns.isBST&&rightkaAns.isBST)&&(root->data>leftkaAns.max&&root->data<rightkaAns.min))
+    {
+        currkaAns.isBST=true;
+    }
+    else{
+        currkaAns.isBST=false;
+    }
+    if(currkaAns.isBST)
+    {
+ans=max(root->data,currkaAns.size);
+    }
+    return currkaAns;
 }
 int main()
 {

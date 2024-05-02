@@ -13,6 +13,8 @@ tree(int data)
     this->right=nullptr;
 }
 };
+
+
 tree* build(tree* root,int data)
 {
     if(root==nullptr)
@@ -194,6 +196,50 @@ tree* BSTusinginorder(int inorder[],int s,int e)
     root->right=BSTusinginorder(inorder,m+1,e);
     return root;
 }
+void doublyLL(tree* root,tree* &
+node)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    doublyLL(root->right,node);
+    root->right=node;
+    if(node!=NULL)
+    {
+        node->left=root;
+    }
+    node=root;
+    doublyLL(root->left,node);
+}
+void printLL(tree* root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    tree* temp=root;
+    while(temp!=NULL)
+    {
+        cout<<temp->data;
+        temp=temp->right;
+    }
+}
+tree* LLtobst(tree* head,int n)
+{
+    if(n<=0||head==NULL)
+    {
+        return NULL;
+    }
+    tree* leftvala=LLtobst(head,n-1-n/2);
+    tree* root=head;
+    root->left=leftvala;
+    head=head->right;
+    root->right=LLtobst(head,n/2);
+    return root;
+
+}
+
 int main()
 {
     tree* root=nullptr;
@@ -201,12 +247,17 @@ int main()
     int s=0;
     int e=7;
     root=BSTusinginorder(inorder,s,e);
+    tree* node=NULL;
+    doublyLL(root,node);
+    cout<<"printing LL"<<endl;
+    printLL(root);
+    build(root,5);
 
     // takeinput(root);/
     
     
 //   cout<<"inordertraversal"<<endl;
-    inordertraversal(root);
+    // inordertraversal(root);
 //   cout<<"preordertraversal"<<endl;
 //     preordertraversal(root);
 //   cout<<"postordertraversal"<<endl;
