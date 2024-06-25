@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int partition(int *arr,int s,int e)
+int partition(int arr[],int s,int e)
 {
     int pivot=s;
     int pivotele=arr[s];
@@ -25,7 +25,7 @@ if(arr[i]<=pivotele)count++;
      return pivot;
 
 }
- void qs(int *arr,int s,int e)
+ void qs(int arr[],int s,int e)
 {//basecase
     if(s>=e)return;
     int p=partition(arr,s,e);

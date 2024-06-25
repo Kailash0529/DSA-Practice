@@ -19,7 +19,7 @@ void merge(int *arr,int s,int e)
         right[i]=arr[k];
         k++;
     }
-    int leftindex=0;8
+    int leftindex=0;
     int rightindex=0;
     int mainindex=s;
     while(leftindex<len1&&rightindex<len2)
