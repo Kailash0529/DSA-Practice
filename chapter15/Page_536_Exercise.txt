@@ -1,0 +1,32 @@
+Across
+1.  DrawPanel
+4.  Center
+5.  Metal
+9.  Listener
+11. Event
+12. Add
+15. Flow
+16. ISA
+17. Animation
+21. Textarea
+23. Checkbox
+25. Label
+26. ActionListener
+
+Down
+2.  AWT
+3.  SetSize
+5.  Menu
+6.  Graphic
+7.  Widget
+8.  SetVisible
+9.  Layout
+10. North
+13. Policy
+14. Callback
+15. Frame
+18. Action
+19. Outer
+20. Panel
+22. Aqua
+24. East
