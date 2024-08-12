@@ -1,0 +1,14 @@
+DeltaEx
+    ^
+GammaEx
+    ^
+BetaEx
+    ^
+AlphaEx
+
+
+       DeltaEx
+     /         \
+BetaEx         GammaEx
+                      \
+                       AlphaEx
