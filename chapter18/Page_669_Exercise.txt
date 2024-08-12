@@ -1,0 +1,1 @@
+Sarah halted the meeting due to concerns about a possible deadlock in the exit sequence design. She worried that synchronizing all the methods could cause blocks or disruptions if multiple spacewalkers attempt to use the airlock at the same time, potentially creating a serious safety hazard.

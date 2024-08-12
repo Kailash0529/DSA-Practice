@@ -1,0 +1,3 @@
+To maintain the meaning while hiding copying, you can rephrase the explanation as follows:
+
+To ensure thread safety when accessing the shared letters list, synchronize access by using Collections.synchronizedList. This approach automatically synchronizes list operations such as add, thereby avoiding race conditions when multiple threads modify the list simultaneously. Furthermore, to guarantee that the list is not altered by other threads during read operations, wrap the list access in a synchronized block within the getLetters() method. This ensures a consistent view of the list's contents.
