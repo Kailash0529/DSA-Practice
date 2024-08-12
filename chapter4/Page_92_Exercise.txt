@@ -1,0 +1,1 @@
+Buchanan marked his instance variables public which led to the breach.
