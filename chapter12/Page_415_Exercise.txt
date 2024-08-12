@@ -1,0 +1,8 @@
+Optional<String> afternoonCoffee = coffees.stream()
+    .min(Comparator.comparingInt(Coffee::getStrength))
+    .map(Coffee::getName);
+
+    Explanation:
+
+    min Method: This method directly finds the minimum element based on the provided comparator. Using min with Comparator.comparingInt(Coffee::getStrength) simplifies the logic and achieves the same result as sorting followed by findFirst().
+    map(Coffee::getName): Extracts the coffee name from the resulting minimum strength coffee.
