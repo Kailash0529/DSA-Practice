@@ -1,0 +1,4 @@
+Television Object
+
+Instance variables - ChannelList, Remote RFID
+Methods - VolumeUp(), ChannelUp(), Mute(), etc.
