@@ -48,7 +48,7 @@ void insertathead(node* &head,node* &tail,int data)
     if(head==NULL)
     {
 head=newnode;
-tail=newnode;
+tail=newnode;   
     }
     newnode->next=head;
     head->prev=newnode;
