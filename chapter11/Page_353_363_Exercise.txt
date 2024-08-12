@@ -1,0 +1,32 @@
+Pg-353:
+1. No issues
+2. Incorrect casting error
+3. -
+
+Pg-363:
+takeAnimals(new ArrayList<Animal>());       Compile
+
+takeDogs(new ArrayList<Animal>());
+
+takeAnimals(new ArrayList<Dog>());
+
+takeDogs(new ArrayList<>());                Compile
+
+List<Dog> dogs = new ArrayList<>();         Compile
+takeDogs(dogs);
+
+takeSomeAnimals(new ArrayList<Dog>());      Compile
+
+takeSomeAnimals(new ArrayList<>());         Compile
+
+takeSomeAnimals(new ArrayList<Animal>());   Compile
+
+List<Animal> animals = new ArrayList<>();   Compile
+takeSomeAnimals(animals);
+
+List<Object> objects = new ArrayList<>();
+takeObjects(objects);
+
+takeObjects(new ArrayList<Dog>());
+
+takeObjects(new ArrayList<Object>());       Compile

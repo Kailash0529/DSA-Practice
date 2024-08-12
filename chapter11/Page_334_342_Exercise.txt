@@ -1,0 +1,14 @@
+Page-334:
+1.  Comparable
+2.  compareTo()
+3.  yes
+4.  yes
+5.  yes
+6.  no
+7.  no
+8.  Comparator
+9.  compare()
+
+Page-342:
+songList.sort((one, two) -> one.getBpm() - two.getBpm());
+songList.sort((one, two) -> two.getTitle().compareTo(one.getTitle()));
