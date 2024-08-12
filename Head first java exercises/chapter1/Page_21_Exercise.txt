@@ -1,0 +1,69 @@
+A.  class ExerciseA {
+        public static void main(String[] args) {
+            int x = 1;
+            while (x < 10) {
+                if (x > 3) {
+                    System.out.println("big x");
+                }
+            }
+        }
+    }
+    Output/Mistake: x is not updated hence loop  will run infinite times.
+    Corrected Code:
+    class ExerciseA {
+        public static void main(String[] args) {
+            int x = 1;
+            while (x < 10) {
+                if (x > 3) {
+                    System.out.println("big x");
+                }
+                x++;
+            }
+        }
+    }
+    
+B.  public static void main(String [] args) {
+        int x = 5;
+        while ( x > 1 ) {
+            x = x - 1;
+            if ( x < 3) {
+                System.out.println("small x");
+            }
+        }
+    }
+    Output/Mistake: The code will not compile because the main method is not inside any class.
+    Corrected Code:
+    public class ExerciseB {
+        public static void main(String[] args) {
+            int x = 5;
+            while (x > 1) {
+                x = x - 1;
+                if (x < 3) {
+                    System.out.println("small x");
+                }
+            }
+        }
+    }
+    
+C.  class ExerciseC {
+        int x = 5;
+        while (x > 1) {
+            x = x - 1;
+            if (x < 3) {
+                System.out.println("small x");
+            }
+        }
+    }
+    Output/Mistake: The code won't compile because the while loop is outside any method, and also the class is not public.
+    Corrected Code:
+    public class Exercise1c {
+        public static void main(String[] args) {
+            int x = 5;
+            while (x > 1) {
+                x = x - 1;
+                if (x < 3) {
+                    System.out.println("small x");
+                }
+            }
+        }
+    }
