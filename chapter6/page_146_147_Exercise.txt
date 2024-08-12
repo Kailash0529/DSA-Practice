@@ -1,0 +1,21 @@
+Declare and initialize the necessary elements.
+Create three objects and store them in a collection.
+Display brief instructions for the user.
+Iterate through the collection of objects.
+Prompt the assistant for input.
+Set attributes for each object based on the input received.
+Check the condition to ensure the collection isn't empty.
+Gather user input for the process.
+Evaluate the input using a custom method.
+Finalize the game with a dedicated method.
+Track the number of attempts the user makes.
+Assume a negative outcome unless otherwise indicated.
+Repeat the process for all objects in the collection.
+Verify the input for accuracy, looking for a match.
+Exit early if the condition is met.
+Remove the matched object from the collection and exit the loop.
+Display the result to the user.
+Show a summary message based on the user's performance.
+Initialize the game object.
+Set up the game environment.
+Start the gameplay loop to continuously receive and check user input.
