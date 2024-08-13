@@ -1,1 +1,0 @@
-In Kate’s code, only the last created object can be accessed because each new contactRef overwrites the previous reference, making the earlier ones inaccessible.
